@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  root to: proc { [200, {}, ["test"]] }
-  
+  root to: "feeds#index"
+
   scope module: :user do
     get "sign_in", to: "sessions#new"
     post "sign_in", to: "sessions#create"
