@@ -5,9 +5,9 @@ class Feed::ImportsController < ApplicationController
 
   def create
     puts import_params[:document].content_type.inspect
-    REXML::Document.new(import_params[:document].tempfile).elements.each("items/item") do |element|
-      puts element.get_elements("title").each(&:get_text)
-    end
+    # REXML::Document.new(import_params[:document].tempfile).elements.each("items/item") do |element|
+    #   puts element.get_elements("title").each(&:get_text)
+    # end
   end
 
   private
