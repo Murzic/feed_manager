@@ -20,7 +20,7 @@ class ImportFeedServiceTest < ActiveSupport::TestCase
     @files_path = File.join File.dirname(__FILE__), "../files/" 
   end
 
-  test "should accept a ActionDispatch::Http::UploadedFile object" do
+  test "should accept an xml ActionDispatch::Http::UploadedFile object" do
     test_feed_xml = File.open(@files_path + "/test_feed.xml", 'r')
     uploaded_file = MockXMLUploadedFile.new(test_feed_xml)
 

@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root to: "feeds#index"
 
-  resources :feeds, only: :index
+  resources :feeds, only: [:index, :show]
 
   namespace :feed do
     resource :imports, only: :create
