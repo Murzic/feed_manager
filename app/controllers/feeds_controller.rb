@@ -7,6 +7,6 @@ class FeedsController < ApplicationController
 
   def show
     @feed = Feed.find(params[:id])
-    @products = @feed.products
+    @products = @feed.products.paginate(page: params[:page], per_page: 10)
   end
 end

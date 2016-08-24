@@ -1,5 +1,9 @@
 <h2>Feed <%= @feed.id %> - <%= @feed.created_at %></h2>
 
+<%= will_paginate @products %>
+
 <div>
-  <%= render "products/_product", collection: @products %>
+  <%= render partial: "products/product", collection: @products %>
 </div>
+
+<%= will_paginate @products %>
