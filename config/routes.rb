@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root to: "feeds#index"
 
-  resources :feeds, only: [:index, :show], shallow: true do
+  resources :feeds, only: [:index, :show, :destroy], shallow: true do
     resources :products, only: [:show]
   end
 

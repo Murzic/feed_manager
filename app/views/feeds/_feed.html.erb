@@ -1,3 +1,5 @@
 <div>
   <%= link_to "feed_#{feed.id} - #{feed.created_at}", feed_path(feed) %>
+  |
+  <%= link_to "Delete", feed_path(feed), method: :delete, confirm: "Are you sure?" %>
 </div>

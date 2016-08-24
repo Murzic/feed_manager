@@ -9,4 +9,10 @@ class FeedsController < ApplicationController
     @feed = Feed.find(params[:id])
     @products = @feed.products.paginate(page: params[:page], per_page: 10)
   end
+
+  def destroy
+    @feed = Feed.find(params[:id])
+    @feed.destroy
+    redirect_to feeds_path
+  end
 end
