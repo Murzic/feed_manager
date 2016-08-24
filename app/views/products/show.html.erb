@@ -1,0 +1,16 @@
+<%= link_to "Inapoi la produse", feed_path(@product.feed) %>
+<div>
+  <div>title: <%= @product.title %></div>
+  <div>price: <%= @product.price %></div>
+  <div>campaign_name: <%= @product.campaign_name %></div>
+  <div>aff_code: <%= @product.aff_code %></div>
+  <div>description: <%= @product.description %></div>
+</div>
+<div>
+  Images: 
+  <div>
+    <% @product.images_array.each do |url| %>
+      <%= image_tag url %>
+    <% end %>
+  </div>
+</div>
