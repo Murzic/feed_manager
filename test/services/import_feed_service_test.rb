@@ -1,4 +1,5 @@
 require 'test_helper'
+require 'benchmark'
 
 class MockXMLUploadedFile
   def initialize xml_feed
@@ -32,8 +33,7 @@ class ImportFeedServiceTest < ActiveSupport::TestCase
     test_feed_xml = File.open(@files_path + "/test_feed.xml", 'r')
     uploaded_file = MockXMLUploadedFile.new(test_feed_xml)
 
-
-    assert ImportFeedService.new(uploaded_file).call
+    puts Benchmark.measure { ImportFeedService.new(uploaded_file).call }
     assert Product.count > 0 
   end
 end
