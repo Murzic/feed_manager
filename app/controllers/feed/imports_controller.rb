@@ -4,10 +4,9 @@ class Feed::ImportsController < ApplicationController
   before_action :authenticate_user!
 
   def create
-    puts import_params[:document].content_type.inspect
-    # REXML::Document.new(import_params[:document].tempfile).elements.each("items/item") do |element|
-    #   puts element.get_elements("title").each(&:get_text)
-    # end
+    import_feed = ImportFeedService.new(import_params[:document])
+    import_feed.call
+    redirect_to root_path
   end
 
   private

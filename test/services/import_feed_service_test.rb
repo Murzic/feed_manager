@@ -27,4 +27,13 @@ class ImportFeedServiceTest < ActiveSupport::TestCase
       ImportFeedService.new(uploaded_file)
     end
   end
+
+  test "should create products" do
+    test_feed_xml = File.open(@files_path + "/test_feed.xml", 'r')
+    uploaded_file = MockXMLUploadedFile.new(test_feed_xml)
+
+
+    assert ImportFeedService.new(uploaded_file).call
+    assert Product.count > 0 
+  end
 end
