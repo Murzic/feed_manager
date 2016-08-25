@@ -1,7 +1,7 @@
-<div class="top_bar">
-  <% if signed_in? %>
-    <%= link_to "Sign Out", sign_out_path, method: :delete %>
-  <% else %>
-    <%= link_to "Sign In", sign_in_path %>
-  <% end %>
+<div class="top-bar">
+  <div class="row top-bar__content">
+    <% if signed_in? %>
+      <%= link_to "Sign Out", sign_out_path, method: :delete, class: "button top-bar__sign-out" %>
+    <% end %>
+  </div>
 </div>
