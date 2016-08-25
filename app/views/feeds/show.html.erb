@@ -1,5 +1,6 @@
 <%= link_to "Back to feeds", feeds_path %>
 <h2>Feed <%= @feed.id %> - <%= @feed.created_at %></h2>
+<%= link_to "Add new product", new_feed_product_path(@feed) %>
 
 <%= will_paginate @products %>
 
