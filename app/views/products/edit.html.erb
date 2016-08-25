@@ -1,5 +1,6 @@
-<%= link_to "Inapoi la produse", feeds_path(@feed) %>
-<%= form_for @product, url: feed_products_path(@feed) do |f| %>
+<%= link_to "Inapoi la produs", product_path(@product) %>
+
+<%= form_for @product, url: product_path(@product) do |f| %>
   <div>
     <%= f.label :title %>
     <%= f.text_field :title %>

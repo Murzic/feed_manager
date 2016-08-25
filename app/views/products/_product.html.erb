@@ -3,4 +3,6 @@
   <div>price: <%= product.price %></div>
   <div>campaign_name: <%= product.campaign_name %></div>
   <%= link_to "Show more", product_path(product) %>
+  <%= link_to "Edit", edit_product_path(product) %>
+  <%= link_to "Destroy", product_path(product), method: :delete %>
 </div>
