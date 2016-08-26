@@ -1,7 +1,14 @@
-<%= form_for :session do |f| %>
-  <%= f.label :email %>
-  <%= f.email_field :email %>
-  <%= f.label :password %>
-  <%= f.password_field :password %>
-  <%= f.submit "Sign in" %>
-<% end %>
+<div class="row">
+  <div class="sign-in-container">
+    <div class="sign-in">
+      <div class="sign-in__title">Sign in</div>
+      <%= form_for :session, html: { class: "sign-in__form" } do |f| %>
+        <%= f.label :email, class: "form__label"%>
+        <%= f.email_field :email, class: "form__text-input" %>
+        <%= f.label :password, class: "form__label"%>
+        <%= f.password_field :password, class: "form__text-input" %>
+        <%= f.submit "Sign in", class: "button form__submit" %>
+      <% end %>
+    </div>
+  </div>
+</div>

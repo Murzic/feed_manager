@@ -1,4 +1,7 @@
+$top-bar-height: 100px;
+
 @import "top_bar";
+@import "sign_in";
 
 body {
 	margin: 0;
@@ -14,7 +17,7 @@ body {
 .button {
 	padding: 0.5em 2em;
 	background-color: #232C33;
-	color: #A0C1D1;
+	color: #dadff7;
 	font-size: 14px;
 	text-decoration: none;
 }
