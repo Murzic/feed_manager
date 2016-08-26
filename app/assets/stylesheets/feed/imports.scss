@@ -1,3 +1,31 @@
-// Place all the styles related to the feed/imports controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.imports-form {
+	display: flex;
+}
+
+.imports-input {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+.imports-label {
+	margin-right: 1em;
+    cursor: pointer;
+    border-radius: 4px	;
+    font-size: 1.25em;
+    border: 1px #a1a1a1 solid;
+    padding: 0 0.9em;
+    font-weight: 500;
+    color: #c5c5c5;
+    text-align: left;
+    height: 30px;
+    display: inline-block;
+    background-color: #ffffff;
+    white-space: nowrap;
+    overflow: hidden;
+    line-height: 30px;
+    width: 150px;
+}

@@ -13,3 +13,21 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+$(function () {
+    $(".imports-input").on("change", function (e) {
+        var fileName = '';
+
+        if (e.target.value) {
+          fileName = e.target.value.split('\\').pop();
+        }
+
+        if (fileName) {
+          $(".imports-label").text(fileName);
+          $(".imports-submit").attr("disabled", false);
+        } else {
+          $(".imports-label").text("Choose file");
+          $(".imports-submit").attr("disabled", true);
+        }
+    });
+});

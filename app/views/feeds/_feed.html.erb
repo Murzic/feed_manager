@@ -1,5 +1,10 @@
-<div>
-  <%= link_to "feed_#{feed.id} - #{feed.created_at}", feed_path(feed) %>
-  |
-  <%= link_to "Delete", feed_path(feed), method: :delete, confirm: "Are you sure?" %>
+<div class="list-item">
+  <div class="list-item__left">
+    <%= link_to "feed_id: #{feed.id}; #{feed.name}", feed_path(feed) %>
+    |
+    <%= feed.products.count %> products
+  </div>
+  <div class="list-item__right">
+    <%= link_to "Delete", feed_path(feed), method: :delete %>
+  </div>
 </div>

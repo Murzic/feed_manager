@@ -1,3 +1,31 @@
-// Place all the styles related to the feeds controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.feeds {
+	padding-top: 40px;
+}
+
+.feeds__title {
+	font-size: 30px;
+	font-weight: 500;
+}
+
+.list {
+	padding: 20px 0;
+}
+
+.list-item {
+	border-radius: 4px;
+	min-height: 42px;
+	padding: 3px 10px;
+	background-color: #A0C1D1;
+	display: flex;
+	align-items: center;
+	border-bottom: 1px solid #dadff7;
+}
+
+.list-item__left {
+	width: 50%;
+}
+
+.list-item__right {
+	width: 50%;
+	text-align: right;
+}

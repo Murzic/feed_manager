@@ -1,5 +1,5 @@
-<%= form_for :import, url: feed_imports_path do |f| %>
-  <%= f.label :document %>
-  <%= f.file_field :document %>
-  <%= f.submit %>
+<%= form_for :import, url: feed_imports_path, html: { multipart: true, class: "imports-form" } do |f| %>
+  <%= f.label :document, "Choose file", class: "imports-label" %>
+  <%= f.file_field :document, class: "imports-input" %>
+  <%= f.submit "Importează", class: "button imports-submit", disabled: true %>
 <% end %>

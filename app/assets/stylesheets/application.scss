@@ -2,6 +2,8 @@ $top-bar-height: 100px;
 
 @import "top_bar";
 @import "sign_in";
+@import "feed/imports";
+@import "feeds";
 
 body {
 	margin: 0;
@@ -20,4 +22,10 @@ body {
 	color: #dadff7;
 	font-size: 14px;
 	text-decoration: none;
+	border: none;
+	cursor: pointer;
+}
+
+.pagination {
+	padding: 15px 0;
 }

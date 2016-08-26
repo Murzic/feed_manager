@@ -1,3 +1,11 @@
-<%= render partial: "feed/imports/form" %>
-
-<%= render @feeds %>
+<div class="row">
+  <div class="feeds">
+    <%= render partial: "feed/imports/form" %>
+    <div class="list">
+      <div class="feeds__title">Feeds</div>
+      <%= will_paginate @feeds %>
+      <%= render @feeds %>
+      <%= will_paginate @feeds %>
+    </div>
+  </div>
+</div>
