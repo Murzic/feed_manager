@@ -1,8 +1,12 @@
-<div>
-  <div>title: <%= product.title %></div>
-  <div>price: <%= product.price %></div>
-  <div>campaign_name: <%= product.campaign_name %></div>
-  <%= link_to "Show more", product_path(product) %>
-  <%= link_to "Edit", edit_product_path(product) %>
-  <%= link_to "Destroy", product_path(product), method: :delete %>
+<div class="list-item list-item_product">
+  <div class="list-item__left">
+    <div>title: <%= product.title %></div>
+    <div>price: <%= product.price %></div>
+    <div>campaign_name: <%= product.campaign_name %></div>
+  </div>
+  <div class="list-item__right">
+    <%= link_to "Show more", product_path(product), class: "button" %>
+    <%= link_to "Edit", edit_product_path(product), class: "button" %>
+    <%= link_to "Destroy", product_path(product), method: :delete, class: "button" %>
+  </div>
 </div>
