@@ -1,12 +1,16 @@
 <div class="list-item list-item_product">
-  <div class="list-item__left">
-    <div>title: <%= product.title %></div>
-    <div>price: <%= product.price %></div>
-    <div>category: <%= product.category %></div>
+  <div class="list-item__one-third">
+    <div><%= product.title %></div>
   </div>
-  <div class="list-item__right">
-    <%= link_to "Show more", product_path(product), class: "button" %>
-    <%= link_to "Edit", edit_product_path(product), class: "button" %>
-    <%= link_to "Destroy", product_path(product), method: :delete, class: "button" %>
+  <div class="list-item__one-sixth list-item_align-center">
+    <div class="product-price"><%= product.price %></div>
+  </div>
+  <div class="list-item__one-sixth">
+    <div><%= product.category %></div>
+  </div>
+  <div class="list-item__one- list-item_align-right">
+    <%= link_to "", product_path(product), class: "round-button round-button_view" %>
+    <%= link_to "", edit_product_path(product), class: "round-button round-button_edit" %>
+    <%= link_to "", product_path(product), method: :delete, class: "round-button round-button_delete" %>
   </div>
 </div>

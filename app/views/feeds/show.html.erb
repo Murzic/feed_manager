@@ -1,9 +1,9 @@
 <div class="row">
-  <%= link_to "Back to feeds", feeds_path %>
-  <h2>Feed <%= @feed.id %> <%= @feed.name %></h2>
-  <%= link_to "Add new product", new_feed_product_path(@feed), class: "button" %>
-
-  <%= will_paginate @products %>
+  <%= link_to "< back", feeds_path %>
+  <div class="align-box">
+    <h2>Feed <%= @feed.id %> <%= @feed.name %></h2>
+    <%= link_to "Add new product", new_feed_product_path(@feed), class: "button" %>
+  </div>
 
   <div class="list">
     <%= render partial: "products/product", collection: @products %>

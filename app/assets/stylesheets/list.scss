@@ -1,6 +1,7 @@
 .list {
-	padding: 20px 0;
+	border-top: 3px solid;
 }
+
 
 .list-item {
 	border-radius: 4px;
@@ -24,4 +25,23 @@
 
 .list-item_product {
 	padding: 20px 10px;
+	justify-content: space-between;
+}
+
+.list-item__one-third {
+	width: 31.333333333%;
+	padding: 0 1%;
+}
+
+.list-item__one-sixth {
+	width: 14.666666666%;
+	padding: 0 1%;
+}
+
+.list-item_align-right {
+	text-align: right;
+}
+
+.list-item_align-center {
+	text-align: center;
 }
