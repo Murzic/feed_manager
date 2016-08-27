@@ -18,6 +18,7 @@ class ImportFeedService
         price: el.elements["price"].text,
         campaign_name: el.elements["campaign_name"].text,
         image_urls: el.elements["image_urls"].text,
+        category: el.elements["category"].text,
         description: el.elements["description"].text
         )
     end

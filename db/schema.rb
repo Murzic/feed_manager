@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160824182319) do
+ActiveRecord::Schema.define(version: 20160827100008) do
 
   create_table "feeds", force: :cascade do |t|
     t.string   "name"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20160824182319) do
     t.string   "description"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+    t.string   "category"
   end
 
   add_index "products", ["feed_id"], name: "index_products_on_feed_id"
