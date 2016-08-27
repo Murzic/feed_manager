@@ -16,7 +16,7 @@ class FeedImport::CSV
         price: el["price"],
         campaign_name: el["campaign_name"],
         image_urls: el["image_urls"],
-        category: el["category"].try(:text),
+        category: el["category"],
         description: el["description"]
         )
     end

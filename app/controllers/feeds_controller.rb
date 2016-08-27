@@ -2,7 +2,7 @@ class FeedsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @feeds = Feed.order(:id).paginate(page: params[:page], per_page: 5)
+    @feeds = Feed.order(id: :desc).paginate(page: params[:page], per_page: 5)
   end
 
   def show
