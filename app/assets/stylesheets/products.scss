@@ -1,3 +1,55 @@
 .product-price {
 	font-weight: bold;
 }
+
+.products-form {
+	width: 40%;
+	padding-top: 30px;
+}
+
+.product-board {
+	display: flex;
+}
+
+.product-board__image-pane {
+	width: 30%;
+	background-color: #ffffff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px 0;
+}
+
+.product-board__image {
+	max-width: 100%;
+}
+
+.product-board__info {
+	padding-left: 1%;
+	width: 49%;
+}
+
+.product-board__price-pane {
+	padding-left: 1%;
+	width: 19%;
+	text-align: right;
+}
+
+.product-board__price {
+	padding-right: 10px;
+	font-size: 24px;
+	font-weight: 700;
+	color: #A0C1D1;
+    display: inline-block;
+    text-align: right;
+}
+
+.product-board__price-label {
+	font-size: 18px;
+}
+
+.product-board__title {
+    font-size: 22px;
+    font-weight: 600;
+    padding-bottom: 10px;
+}

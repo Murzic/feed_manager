@@ -1,29 +1,31 @@
-<%= link_to "Inapoi la produs", product_path(@product) %>
+<div class="row">
+  <%= link_to "< back", product_path(@product) %>
 
-<%= form_for @product, url: product_path(@product) do |f| %>
-  <div>
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-  </div>
-  <div>
-    <%= f.label :aff_code %>
-    <%= f.text_field :aff_code %>
-  </div>
-  <div>
-    <%= f.label :price %>
-    <%= f.text_field :price %>
-  </div>
-  <div>
-    <%= f.label :campaign_name %>
-    <%= f.text_field :campaign_name %>
-  </div>
-  <div>
-    <%= f.label :image_urls %>
-    <%= f.text_field :image_urls %>
-  </div>
-  <div>
-    <%= f.label :description %>
-    <%= f.text_field :description %>
-  </div>
-  <%= f.submit %>
-<% end %>
+  <%= form_for @product, url: product_path(@product), html: { class: "products-form" } do |f| %>
+    <div>
+      <%= f.label :title, class: "form__text-label" %>
+      <%= f.text_field :title, class: "form__text-input" %>
+    </div>
+    <div>
+      <%= f.label :aff_code, class: "form__text-label" %>
+      <%= f.text_field :aff_code, class: "form__text-input" %>
+    </div>
+    <div>
+      <%= f.label :price, class: "form__text-label" %>
+      <%= f.text_field :price, class: "form__text-input" %>
+    </div>
+    <div>
+      <%= f.label :campaign_name, class: "form__text-label" %>
+      <%= f.text_field :campaign_name, class: "form__text-input" %>
+    </div>
+    <div>
+      <%= f.label :image_urls, class: "form__text-label" %>
+      <%= f.text_field :image_urls, class: "form__text-input" %>
+    </div>
+    <div>
+      <%= f.label :description, class: "form__text-label" %>
+      <%= f.text_field :description, class: "form__text-input" %>
+    </div>
+    <%= f.submit "update product", class: "form__submit button" %>
+  <% end %>
+</div>

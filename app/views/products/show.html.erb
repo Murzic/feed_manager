@@ -1,19 +1,24 @@
-<%= link_to "Inapoi la produse", feed_path(@product.feed) %>
-<%= link_to "Edit", edit_product_path(@product) %>
-<%= link_to "Destroy", product_path(@product), method: :delete %>
+<div class="row">
+  <div class="align-box pad1">
+    <%= link_to "< back", feed_path(@product.feed) %>
+    <div>
+      <%= link_to "", edit_product_path(@product), class: "round-button round-button_edit" %>
+      <%= link_to "", product_path(@product), method: :delete, class: "round-button round-button_delete" %>
+    </div>
+  </div>
 
-<div>
-  <div>title: <%= @product.title %></div>
-  <div>price: <%= @product.price %></div>
-  <div>campaign_name: <%= @product.campaign_name %></div>
-  <div>aff_code: <%= @product.aff_code %></div>
-  <div>description: <%= @product.description %></div>
-</div>
-<div>
-  Images: 
-  <div>
-    <% @product.images_array.each do |url| %>
-      <%= image_tag url %>
-    <% end %>
+  <div class="product-board">
+    <div class="product-board__image-pane">
+      <%= image_tag @product.images_array.first, class: "product-board__image" %>
+    </div>
+    <div class="product-board__info">
+      <%= simple_format(@product.title, {class: "product-board__title"}, wrapper_tag: "div") %>
+      <div>Campaign name: <%= @product.campaign_name %></div>
+      <%= simple_format("Description: #{@product.description}", {class: "product-board__description"}, wrapper_tag: "div") %>
+      <div>Category: <%= @product.category %></div>
+    </div>
+    <div class="product-board__price-pane">
+      <div class="product-board__price"><span class="product-board__price-label">price</span><br><%= @product.price %></div>
+    </div>
   </div>
 </div>
