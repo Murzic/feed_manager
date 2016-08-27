@@ -1,13 +1,13 @@
-require 'rexml/document'
+require "rexml/document"
 
-class ImportFeedService
-  def initialize uploaded_file
-    @uploaded_file = uploaded_file
+class FeedImport::XML
+  def initialize(xml_file)
+    @xml_file = xml_file
   end
 
   def call
     feed = Feed.create
-    doc = REXML::Document.new(@uploaded_file.tempfile)
+    doc = REXML::Document.new(xml_file)
     root = doc.root
 
     products = []
@@ -18,7 +18,7 @@ class ImportFeedService
         price: el.elements["price"].text,
         campaign_name: el.elements["campaign_name"].text,
         image_urls: el.elements["image_urls"].text,
-        category: el.elements["category"].text,
+        category: el.elements["category"].try(:text),
         description: el.elements["description"].text
         )
     end
@@ -27,5 +27,5 @@ class ImportFeedService
 
   private
 
-  attr_reader :uploaded_file
+  attr_reader :xml_file
 end
