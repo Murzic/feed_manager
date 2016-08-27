@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.fancybox.pack
 //= require_tree .
 
 $(function () {
@@ -29,5 +30,10 @@ $(function () {
           $(".imports-label").text("Choose file");
           $(".imports-submit").attr("disabled", true);
         }
+    });
+
+    $(".fancybox").fancybox({
+        openEffect  : 'none',
+        closeEffect : 'none'
     });
 });
