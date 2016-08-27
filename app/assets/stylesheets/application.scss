@@ -9,6 +9,11 @@ $top-bar-height: 100px;
 body {
 	margin: 0;
 	background-color: #DADFF7;
+	font-family: 'Open Sans', sans-serif;
+}
+
+a {
+	text-decoration: none;
 }
 
 .row {
@@ -30,4 +35,5 @@ body {
 
 .pagination {
 	padding: 15px 0;
+	text-transform: lowercase;
 }

@@ -1,9 +1,10 @@
 <div class="row">
   <div class="feeds">
-    <%= render partial: "feed/imports/form" %>
-    <div class="list">
+    <div class="align-box">
       <div class="feeds__title">Feeds</div>
-      <%= will_paginate @feeds %>
+      <%= render partial: "feed/imports/form" %>
+    </div>
+    <div class="list">
       <%= render @feeds %>
       <%= will_paginate @feeds %>
     </div>
