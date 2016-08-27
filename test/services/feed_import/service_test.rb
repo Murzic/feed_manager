@@ -32,13 +32,28 @@ class FeedImport::ServiceTest < ActiveSupport::TestCase
     assert_raises { service_obj.set_strategy(uploaded_file) }
   end
 
-  test "should create products" do
+  test "should create products when given an xml" do
     skip
     test_feed_file = File.open(@files_path + "/test_feed.xml", 'r')
-    uploaded_file = MockXMLUploadedFile.new(test_feed_file)
+    uploaded_file = XMLUploadedFileMock.new(test_feed_file)
 
-    puts Benchmark.measure { ImportFeedService.new(uploaded_file).call }
-    assert Product.count > 0 
+    service_obj = FeedImport::Service.new
+    service_obj.set_strategy(uploaded_file)
+
+
+    assert_respond_to service_obj.call, :num_inserts 
+  end
+
+  test "should create products when given an csv" do
+    skip
+    test_feed_file = File.open(@files_path + "/test_feed.csv", 'r')
+    uploaded_file = CSVUploadedFileMock.new(test_feed_file)
+
+    service_obj = FeedImport::Service.new
+    service_obj.set_strategy(uploaded_file)
+
+
+    assert_respond_to service_obj.call, :num_inserts 
   end
 end
 
