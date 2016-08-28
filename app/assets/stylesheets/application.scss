@@ -2,6 +2,7 @@ $top-bar-height: 100px;
 
 @import "top_bar";
 @import "sign_in";
+@import "forms";
 @import "feed/imports";
 @import "feeds";
 @import "list";
@@ -55,6 +56,10 @@ h2 {
 	background-position: center;
 	background-size: auto 50%;
 	margin: 0 5px;
+}
+
+.round-button:hover {
+	border: 1px solid #eaedfa;
 }
 
 .round-button_view {

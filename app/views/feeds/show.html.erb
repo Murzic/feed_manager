@@ -5,6 +5,12 @@
     <%= link_to "add new product", new_feed_product_path(@feed), class: "button" %>
   </div>
 
+    <div class="search">
+      <%= form_tag("", method: "get") do %>
+        <%= text_field_tag(:q, params[:q], placeholder: "Search") %>
+      <% end %>
+    </div>
+
   <div class="list">
     <%= render partial: "products/product", collection: @products %>
   </div>
