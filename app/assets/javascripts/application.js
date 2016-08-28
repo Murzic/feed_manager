@@ -36,4 +36,20 @@ $(function () {
         openEffect  : 'none',
         closeEffect : 'none'
     });
+
+    $(document).on("keyup", function(event) {
+        if (event.which == 83) {
+            $(".search").find(".form__text-input").focus();
+        }
+    });
+
+    $(".sort-buttons").on("click", ".sort-button", function (event) {
+        event.preventDefault();
+        var sort = $(this).data("sort");
+        var order = $(this).data("order");
+        var search_form = $(this).closest(".js-product-query").find(".search-form");
+        search_form.find(".js-sort-field").val(sort);
+        search_form.find(".js-order-field").val(order);
+        search_form.submit();
+    });
 });

@@ -7,7 +7,7 @@ class FeedsController < ApplicationController
 
   def show
     @feed = Feed.find(params[:id])
-    @products = @feed.products.where("lower(title) LIKE lower(?)", "%#{params[:q]}%").paginate(page: params[:page], per_page: 10)
+    @products = @feed.products.where("lower(title) LIKE lower(?)", "%#{params[:q]}%").order_by(params[:sort], params[:order]).paginate(page: params[:page], per_page: 10)
   end
 
   def destroy
