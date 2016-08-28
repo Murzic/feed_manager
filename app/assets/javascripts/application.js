@@ -52,4 +52,12 @@ $(function () {
         search_form.find(".js-order-field").val(order);
         search_form.submit();
     });
+
+    $(".round-button_delete").on("click", function() {
+        $(this).css("pointer-events", "none");
+    });
+
+    $(".imports-form").on("submit", function () {
+        $(this).css("pointer-events", "none");
+    });
 });
