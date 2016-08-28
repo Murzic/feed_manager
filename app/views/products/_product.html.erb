@@ -1,6 +1,6 @@
 <div class="list-item list-item_product">
   <div class="list-item__one-third">
-    <div><%= product.title %></div>
+    <%= simple_format(product.title, {}, wrapper_tag: "div") %>
   </div>
   <div class="list-item__one-sixth list-item_align-center">
     <div class="product-price"><%= product.price %></div>

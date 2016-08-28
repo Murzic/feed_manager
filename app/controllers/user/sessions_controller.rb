@@ -1,6 +1,4 @@
 class User::SessionsController < ApplicationController
-  include User::SessionsHelper
-
   def new
     redirect_to root_path if signed_in?
   end
