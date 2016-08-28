@@ -58,6 +58,16 @@ h2 {
 	margin: 0 5px;
 }
 
+.sort-button {
+	background-color: transparent;
+	color: #A0C1D1;
+	font-weight: 600;
+}
+
+.sort-button_active {
+	color: #5a7d7c;
+}
+
 .round-button:hover {
 	border: 1px solid #eaedfa;
 }

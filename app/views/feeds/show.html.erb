@@ -4,6 +4,7 @@
     <h2>Feed <%= @feed.id %> <%= @feed.name %></h2>
     <%= link_to "add new product", new_feed_product_path(@feed), class: "button" %>
   </div>
+
   <div class="align-box js-product-query">
     <div class="search">
       <%= form_tag("", method: "get", class: "search-form") do %>
@@ -13,9 +14,9 @@
       <% end %>
     </div>
     <div class="sort-buttons">
-      <div data-sort="price" data-order="asc" class="button sort-button">price: low to high </div>
-      <div data-sort="price" data-order="desc" class="button sort-button">price: high to low</div>
-      <div data-sort="title" data-order="" class="button sort-button">title: A to Z </div>
+      <div data-sort="price" data-order="asc" class="button sort-button <%= 'sort-button_active' if params[:sort] == 'price' && params[:order] == 'asc' %>">price: low to high </div>
+      <div data-sort="price" data-order="desc" class="button sort-button <%= 'sort-button_active' if params[:sort] == 'price' && params[:order] == 'desc' %>">price: high to low</div>
+      <div data-sort="title" data-order="" class="button sort-button <%= 'sort-button_active' if params[:sort] == 'title' %>">title: A to Z </div>
     </div>
   </div>
 

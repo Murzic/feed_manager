@@ -8,7 +8,7 @@ class Product < ActiveRecord::Base
     'title_'   => 'title',
   }
 
-  scope :order_by, -> (sort, order) { order(ORDER_MAPPINGS[sort + "_" + order]) }
+  scope :order_by, -> (sort, order) { order(ORDER_MAPPINGS[(sort || "") + "_" + (order || "")]) }
 
   def images_array
     if image_urls
